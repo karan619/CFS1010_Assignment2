@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Work To-Dos</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+
+  <body onload="tasker.construct()">
+    <div id="myDIV" class="header">
+      <h2 style="margin: 5px">My To Do List</h2>
+      <input type="text" id="myInput" placeholder="Title..." />
+      <div id="addBtn" class="Btn">Add</div>
+    </div>
+
+    <ul id="myUL" class="unchecked"></ul>
+    <script src="Jscript.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        $("#myUL").sortable();
+        $("#myUL").disableSelection();
+      });
+    </script>
+  </body>
+</html>
